@@ -2,7 +2,7 @@ def fibonacci(n):
 	"""A generator that returns numbers in a fibonacci sequence"""
 	# Set up initial values:
 	current = 1
-	next = 2
+	next = 1
 	# Now we calculte n fibonacci numbers, yeilding each one in turn:
 	for i in xrange(n):
 		yield current
@@ -16,7 +16,7 @@ def findNotExceeding(theMax):
 	while finalFibonacci(n) < theMax:
 		n += 1
 	
-	return n-1, finalFibonacci(n-1)
+	return n, finalFibonacci(n)
 
 if __name__ == "__main__":
 	print "Finding the last fibonacci term under 4 000 000..."
